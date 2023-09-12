@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import Button from './Button';
+
 import { FaBars, FaTimes } from 'react-icons/fa'; // Import the menu and close icons from react-icons/fa
 
 const Nav = () => {
   const Links = [
     { name: 'HOME', link: '/' },
-    { name: 'SERVICE', link: '/' },
     { name: 'ABOUT', link: '/' },
-    { name: 'BLOGS', link: '/' },
+    { name: 'WORK', link: '/' },
+    { name: 'SKILLS', link: '/' },
     { name: 'CONTACT', link: '/' },
   ];
   const [open, setOpen] = useState(false);
@@ -44,7 +44,7 @@ const Nav = () => {
               </a>
             </li>
           ))}
-          <Button>Get Started</Button>
+          
         </ul>
       </div>
     </div>
