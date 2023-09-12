@@ -9,64 +9,69 @@ const scaleVariants = {
     transition: {
       duration: 1,
       ease: 'easeInOut',
-  }
-}
-}
+    },
+  },
+};
 
 const Header = () => {
   return (
-    <div className='pt-16 bg-slate-100'> 
+    <div className='pt-2 bg-slate-100'>
       <motion.div
-        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        className='transform translate-x-[-100%] opacity-0'
+        animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className=''>
-          <div className='flex items-center justify-center h-screen'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-10'>
+          <div className=' '>
             <div>
-              <span>👋</span>
+              <span role='img' aria-label='Wave emoji'>
+                👋
+              </span>
               <div>
                 <p className='text-xl font-semibold'>Hello, I am</p>
                 <h1 className='text-4xl font-bold'>Felix Jumason</h1>
               </div>
             </div>
           </div>
-          <div className="w-full p-4 shadow-md lg:max-w-lg rounded-full place-items-end ">
-  <div className="card-header">
-    <h2>Web UI</h2>
-    <h2>Developer</h2>
-  </div>
-  
-</div>
+          <div className='block max-w-[15rem] rounded-lg bg-white text-left shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700'>
+            <div className='card-header'>
+              <h2>Web UI</h2>
+              <h2>Developer</h2>
+            </div>
+          </div>
         </div>
       </motion.div>
       <motion.div
-        whileInView={{ opacity: [0, 1] }}
+        className='profile relative'
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className='profile'
       >
-        <img src={images.phelix} alt='phelix' className='rounded-full w-32 h-32' />
+        <div className='h-60 w-60 rounded-full border-4 border-blue-600'>
+        
+          <img src={images.phelix} alt='phelix' className='' />
+        </div>
       </motion.div>
       <motion.img
-      whileInView={{scale: [0, 1]}}
-      transition={{ duration: 1, ease: 'easeInOut'}}
-      src={images.circle}
-      className='ovarlay'
-       />
+        src={images.circle}
+        className='overlay'
+        animate={{ scale: 1 }}
+        initial={{ scale: 0 }}
+        transition={{ duration: 1, ease: 'easeInOut' }}
+      />
       <motion.div
-      variants={scaleVariants}
-      whileInView={scaleVariants.whileInView}
-      className='circles'
+        variants={scaleVariants}
+        animate='whileInView'
+        className='circles'
       >
-        {[images.cpp, images.js, images.css, ].map((circle, index) => (
-          <div key={`cirle-index
-          `}>
+        {[images.cpp, images.js, images.css].map((circle, index) => (
+          <div key={`circle-${index}`}>
             <img src={circle} alt='circle' className='w-16 h-16' />
-
           </div>
         ))}
-
       </motion.div>
     </div>
   );
 };
+
 export default Header;
