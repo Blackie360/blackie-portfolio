@@ -3,9 +3,9 @@ import { About, Skills, Testimonials, Work, Header, Footer } from './container'
 import Navbar from './components/Navbar'
 const App = () => {
   return (
-    <div className='app'>
+    <div className='app pt-4'>
       <Navbar />
-      <Header />
+      <Header  />
       <About />
       <Work />
       <Skills />

@@ -15,7 +15,7 @@ const scaleVariants = {
 
 const Header = () => {
   return (
-    <div className='pt-16'> 
+    <div className='pt-16 bg-slate-100'> 
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 1 }}
@@ -30,11 +30,13 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className=''>
-            <p>web</p>
-            <br />
-            <p>ui/</p>
-          </div>
+          <div className="w-full p-4 shadow-md lg:max-w-lg rounded-full place-items-end ">
+  <div className="card-header">
+    <h2>Web UI</h2>
+    <h2>Developer</h2>
+  </div>
+  
+</div>
         </div>
       </motion.div>
       <motion.div
@@ -67,5 +69,4 @@ const Header = () => {
     </div>
   );
 };
-
 export default Header;
