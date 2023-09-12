@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-
-import { FaBars, FaTimes } from 'react-icons/fa'; // Import the menu and close icons from react-icons/fa
+import React, { useState, useEffect } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Nav = () => {
   const Links = [
@@ -11,22 +10,42 @@ const Nav = () => {
     { name: 'CONTACT', link: '/' },
   ];
   const [open, setOpen] = useState(false);
+  const [navbarOpacity, setNavbarOpacity] = useState(1); // Initial opacity is 1 (fully visible)
+
+  // Add a scroll event listener to handle navbar opacity
+  useEffect(() => {
+    const handleScroll = () => {
+      // Calculate the new opacity based on scroll position
+      const scrollY = window.scrollY || window.pageYOffset;
+      const maxScroll = 100; // Adjust this value as needed
+      const newOpacity = 1 - Math.min(scrollY / maxScroll, 1);
+      setNavbarOpacity(newOpacity);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="shadow-md w-full fixed top-0 left-0">
+    <div
+      className="shadow-md w-full fixed top-0 left-0"
+      style={{ opacity: navbarOpacity }} // Set opacity based on state
+    >
       <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
         <div className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800">
-          <span className="text-3xl text-indigo-600 mr-1 pt-2">
-            <ion-icon name="logo-ionic"></ion-icon>
-          </span>
-          CodeFlix
+          {/* Your logo and title */}
         </div>
 
         <div
           onClick={() => setOpen(!open)}
-          className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
+          className={`text-3xl absolute right-8 top-4 cursor-pointer md:hidden ${
+            open ? 'top-6' : '' // Adjust top position for open and closed state
+          }`}
         >
-          {open ? <FaTimes /> : <FaBars />} {/* Use FaBars for menu and FaTimes for close */}
+          {open ? <FaTimes /> : <FaBars />}
         </div>
 
         <ul
@@ -44,7 +63,6 @@ const Nav = () => {
               </a>
             </li>
           ))}
-          
         </ul>
       </div>
     </div>
