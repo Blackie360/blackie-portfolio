@@ -19,9 +19,9 @@ const Header = () => {
       <motion.div
         className='transform translate-x-[-100%] opacity-0'
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.5 }}
       >
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-10'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-10 '>
           <div className=' '>
             <div>
               <span role='img' aria-label='Wave emoji'>
