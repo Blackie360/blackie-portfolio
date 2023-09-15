@@ -3,11 +3,11 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Nav = () => {
   const Links = [
-    { name: 'HOME', link: '/' },
-    { name: 'ABOUT', link: '/' },
-    { name: 'WORK', link: '/' },
+    { name: 'HOME', link: '#home' },
+    { name: 'ABOUT', link: '#about' },
+    { name: 'WORK', link: '#work' },
     { name: 'SKILLS', link: '/' },
-    { name: 'CONTACT', link: '/' },
+    { name: 'CONTACT', link: '#contact' },
   ];
   const [open, setOpen] = useState(false);
   const [navbarOpacity, setNavbarOpacity] = useState(1); // Initial opacity is 1 (fully visible)
