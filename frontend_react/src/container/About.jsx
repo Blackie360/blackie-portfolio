@@ -9,8 +9,9 @@ const About = () => {
   };
 
   return (
-    <motion.div
-      className="bg-white p-6 rounded-lg shadow-lg"
+    <motion.div 
+      id='about'
+      className="bg-gray-100 p-6 rounded-lg shadow-lg"
       initial="hidden"
       animate="visible"
       variants={containerVariants}

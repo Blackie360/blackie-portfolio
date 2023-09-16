@@ -4,7 +4,7 @@ import { images } from '../constants';
 
 const Header = () => {
   return (
-    <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 text-center lg:text-left">
           <h1 className="text-4xl tracking-tight font-extrabold text-black sm:text-5xl md:text-6xl">

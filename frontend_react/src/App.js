@@ -1,5 +1,5 @@
 import React from 'react'
-import { About, Skills, Testimonials, Work, Header, Footer } from './container'
+import { About, Plan, Testimonials, Work, Header, Footer } from './container'
 import Navbar from './components/Navbar'
 const App = () => {
   return (
@@ -8,7 +8,7 @@ const App = () => {
       <Header  />
       <About />
       <Work />
-      <Skills />
+      <Plan />
       <Testimonials />
       <Footer />
     </div>

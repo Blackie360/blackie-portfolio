@@ -5,9 +5,9 @@ const Nav = () => {
   const Links = [
     { name: 'HOME', link: '#home' },
     { name: 'ABOUT', link: '#about' },
-    { name: 'WORK', link: '#work' },
-    { name: 'SKILLS', link: '/' },
-    { name: 'CONTACT', link: '#contact' },
+    { name: 'SERVICES', link: '#services' },
+    { name: 'PLAN', link: '#plan' },
+    
   ];
   const [open, setOpen] = useState(false);
   const [navbarOpacity, setNavbarOpacity] = useState(1); // Initial opacity is 1 (fully visible)
@@ -15,9 +15,9 @@ const Nav = () => {
   // Add a scroll event listener to handle navbar opacity
   useEffect(() => {
     const handleScroll = () => {
-      // Calculate the new opacity based on scroll position
+      
       const scrollY = window.scrollY || window.pageYOffset;
-      const maxScroll = 100; // Adjust this value as needed
+      const maxScroll = 100; 
       const newOpacity = 1 - Math.min(scrollY / maxScroll, 1);
       setNavbarOpacity(newOpacity);
     };
