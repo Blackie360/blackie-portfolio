@@ -1,29 +1,42 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { images } from '../constants';
+import { client, urlFor } from '../client';
 
-const abouts = [
-  {
-    title: 'Frontend Development',
-    description:
-      'Frontend development is the development of those elements of a website that the customer sees and interacts with directly. It is a combination of programming skills (knowing which program to choose and when to use it), HTML, CSS, and JavaScript.',
-    imgUrl: images.frontend,
-  },
-  {
-    title: 'Cybersecurity',
-    description:
-      'Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks, damage, or unauthorized access.',
-    imgUrl: images.cyber,
-  },
-  {
-    title: 'Web Development',
-    description:
-      'Web development refers to building and maintaining websites and web applications. It involves coding, designing, and managing content.',
-    imgUrl: images.developer,
-  },
-];
+// const abouts = [
+//   {
+//     title: 'Frontend Development',
+//     description:
+//       'Frontend development is the development of those elements of a website that the customer sees and interacts with directly. It is a combination of programming skills (knowing which program to choose and when to use it), HTML, CSS, and JavaScript.',
+//     imgUrl: images.frontend,
+//   },
+//   {
+//     title: 'Cybersecurity',
+//     description:
+//       'Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks, damage, or unauthorized access.',
+//     imgUrl: images.cyber,
+//   },
+//   {
+//     title: 'Web Development',
+//     description:
+//       'Web development refers to building and maintaining websites and web applications. It involves coding, designing, and managing content.',
+//     imgUrl: images.developer,
+//   },
+// ];
+ 
+
 
 const About = () => {
+const [abouts, setAbouts] = useState([])
+useEffect(() =>{
+  const query = '*[_type == "about"]';
+
+  client.fetch(query)
+  .then((data) => setAbouts(data))
+  
+
+}, [])
+
   return (
     <div className="bg-gray-100 min-h-screen p-4">
       <h2 className="text-2xl text-center mb-8">
@@ -41,7 +54,7 @@ const About = () => {
             key={about.title + index}
           >
             <img
-              src={about.imgUrl}
+              src={urlFor(about.imgUrl)}
               alt={about.title}
               className="w-full h-auto rounded-lg"
             />
