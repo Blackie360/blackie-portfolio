@@ -40,50 +40,52 @@ const Header = () => {
   
       {/* Content section */}
       <div className="md:w-1/2 text-center md:text-left">
-        <h1 className="text-2xl font-bold">Hello 👋 <br />I am Felix Jumas</h1>
-        <p className="text-lg">Frontend Developer</p>
+        <h1 className="text-xl font-sans">Hello 👋  I am </h1>
+        <h1 className='text-2xl font-bold'>Felix Jumason</h1>
+        <p className="text-2xl font-serif">Frontend Developer</p>
   
         {/* Buttons */}
         <div className="my-4 space-x-4 flex justify-center">
-          <button className="border border-black bg-white hover:bg-blue-600 text-black font-bold py-2 px-4 rounded">
+          <button className="border border-black bg-white hover:bg-gray-800 text-black font-bold py-2 px-4 rounded">
             Download CV
           </button>
-          <button className="border border-black bg-white hover:bg-blue-600 text-black font-bold py-2 px-4 rounded">
+          <button className="border border-black bg-white hover:bg-gray-800 text-black font-bold py-2 px-4 rounded">
             Contact Info
           </button>
         </div>
   
         {/* Social Icons */}
-        <div className="flex space-x-4">
+        <h3 className='flex justify-center text-xl'>let's connect </h3>
+        <div className="flex justify-center space-x-4">
           <a
-            href="https://twitter.com"
+            href="https://twitter.com/360_gamerx"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:text-blue-600"
+            className="text-black-500 hover:bg-gray-800"
           >
             <FaTwitter className="text-2xl" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3B17FBBYeRQW607HbhqFkkSA%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:text-blue-600"
+            className="text-black-500 hover:bg-gray-800"
           >
             <FaLinkedin className="text-2xl" />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/Blackie360"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:text-blue-600"
+            className="text-black-500 hover:bg-gray-800"
           >
             <FaGithub className="text-2xl" />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/p.h.el.i.x/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:text-blue-600"
+            className="text-black-500 hover:bg-gray-800"
           >
             <FaInstagram className="text-2xl" />
           </a>
