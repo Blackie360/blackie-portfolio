@@ -35,7 +35,7 @@ const Work = () => {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">Portfolio Section</h2>
+      <h2 className="text-3xl font-bold mb-4"><span className='text-orange-500'>Portfolio</span> Section</h2>
 
       {/* Filter Buttons */}
       <div className="flex space-x-4">
@@ -43,8 +43,8 @@ const Work = () => {
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
-            className={`p-2 px-4 text-center cursor-pointer border rounded ${
-              activeFilter === item ? 'bg-blue-500 text-white' : 'bg-white text-gray-800'
+            className={`p-2 px-4 text-center cursor-pointer border border-black bg-white hover:bg-gray-800 text-black font-bold py-2  rounded ${
+              activeFilter === item ? 'bg-purple-500 text-white' : 'bg-white text-black'
             }`}
           >
             {item}
@@ -59,8 +59,8 @@ const Work = () => {
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6"
       >
         {filterWork.map((work, index) => (
-          <div key={index} className="bg-white p-4 border rounded shadow-md">
-            <img src={urlFor(work.imgUrl)} alt={work.name} className="w-full h-40 object-cover mb-4" />
+          <div key={index} className="bg-white p-4 border rounded shadow-md group hover:scale-105 hover:shadow-lg transition-transform duration-300">
+            <img src={urlFor(work.imgUrl)} alt={work.name} className="w-full h-40 object-cover mb-4 transform group-hover:scale-110 transition-transform duration-300" />
             <div className="flex justify-center space-x-4">
               <a href={work.projectLink} target="_blank" rel="noopener noreferrer">
                 <motion.div
