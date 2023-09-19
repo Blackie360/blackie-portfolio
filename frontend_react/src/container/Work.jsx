@@ -37,7 +37,7 @@ const Work = () => {
     <div>
       <h2 className="text-3xl font-bold mb-4"><span className='text-orange-500'>Portfolio</span> Section</h2>
 
-      {/* Filter Buttons */}
+    
       <div className="flex space-x-4">
         {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
           <div
@@ -52,7 +52,7 @@ const Work = () => {
         ))}
       </div>
 
-      {/* Work Cards */}
+      
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
