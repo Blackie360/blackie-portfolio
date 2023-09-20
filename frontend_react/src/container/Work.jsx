@@ -38,7 +38,7 @@ const Work = () => {
       <h2 className="text-3xl font-bold mb-4"><span className='text-orange-500'>Portfolio</span> Section</h2>
 
     
-      <div className="flex space-x-4">
+      <div className="flex space-x-4 text-black">
         {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
           <div
             key={index}
