@@ -44,7 +44,7 @@ const Work = () => {
             key={index}
             onClick={() => handleWorkFilter(item)}
             className={`p-2 px-4 text-center cursor-pointer border border-black bg-white hover:bg-gray-800 text-black font-bold py-2  rounded ${
-              activeFilter === item ? 'bg-purple-500 text-white' : 'bg-white text-black'
+              activeFilter === item ? 'bg-purple-500 text-black' : 'bg-white text-black'
             }`}
           >
             {item}
