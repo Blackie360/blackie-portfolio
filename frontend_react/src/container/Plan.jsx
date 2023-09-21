@@ -22,12 +22,12 @@ const Plan = () => {
             key={skill.name}
             className={`bg-${skill.bgColor} p-4 border shadow-md transition duration-300 transform hover:-translate-y-1 hover:shadow-xl`}
           >
-            <div className="text-center rounded-full">
+            <div className="">
               <div className="w-16 h-16 mx-auto mb-2 rounded-full overflow-hidden">
                 <img
                   src={urlFor(skill.icon).url()}
                   alt={skill.name}
-                  className="w-full h-full rounded-full object-cover"
+                  className="h-full w-full rounded-full object-cover"
                 />
               </div>
               <p className="font-semibold">{skill.name}</p>
