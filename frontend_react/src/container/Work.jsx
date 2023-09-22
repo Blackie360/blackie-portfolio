@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AiFillGithub, AiFillEye } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-import { urlFor, Client, client } from '../client';
+import { urlFor,  client } from '../client';
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All');
