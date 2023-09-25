@@ -33,7 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-60 min-h-screen flex justify-center items-center">
+    <div className="bg-gray-100 min-h-screen flex justify-center items-center">
       <div className="bg-white p-6 rounded-lg shadow-md w-full md:w-2/3 lg:w-3/4">
         
 

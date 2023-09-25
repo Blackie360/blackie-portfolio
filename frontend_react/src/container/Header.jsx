@@ -22,9 +22,9 @@ const Header = () => {
 
   return (
     <div id='home' className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
-    {/* On large screens, the image is larger on the left */}
+    
     <div className="md:flex md:items-center md:justify-between">
-      {/* Image section */}
+      
       <motion.div
         className="md:w-1/2 rounded-full overflow-hidden w-64 h-64 mb-6 md:mb-0 md:mr-4"
         initial="initial"

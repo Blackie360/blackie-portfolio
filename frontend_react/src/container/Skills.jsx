@@ -20,7 +20,7 @@ const Skills = () => {
 
   return (
     <>
-    <div id='skills' >
+    <div id='skills'className='bg-gray-100' >
     <br />
       <h2 className="text-2xl font-bold flex justify-center">Skills & Tools</h2>
 

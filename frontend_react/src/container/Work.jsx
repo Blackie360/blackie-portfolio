@@ -44,7 +44,7 @@ const Work = () => {
   };
 
   return (
-    <div id="portfolio">
+    <div id="portfolio" className='bg-gray-100'>
       <h2 className="text-3xl gap-2 font-bold mb-4 flex justify-center"><span className='text-orange-500'>Portfolio </span> Section</h2>
 
       <div className="flex space-x-4 text-black justify-center">
