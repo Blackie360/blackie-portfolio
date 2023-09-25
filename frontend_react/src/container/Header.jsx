@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+    <div id='home' className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
     {/* On large screens, the image is larger on the left */}
     <div className="md:flex md:items-center md:justify-between">
       {/* Image section */}

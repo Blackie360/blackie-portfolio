@@ -15,7 +15,7 @@ const About = () => {
 
 
   return (
-    <div className="bg-gray-100 min-h-screen p-4">
+    <div id='about' className="bg-gray-100 min-h-screen p-4">
       <h2 className="text-2xl text-center mb-8">
   The greatest <span className="text-orange-600 font-semibold">ideas</span> are the{' '}
   <span className="text-orange-600 font-semibold">simplest.</span>

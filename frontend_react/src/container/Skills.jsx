@@ -20,6 +20,7 @@ const Skills = () => {
 
   return (
     <>
+    <div id='skills' >
     <br />
       <h2 className="text-2xl font-bold flex justify-center">Skills & Tools</h2>
 
@@ -46,6 +47,7 @@ const Skills = () => {
             </div>
           </motion.div>
         ))}
+      </div>
       </div>
     </>
   );
