@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { images } from '../constants';
 import { AiFillMail } from 'react-icons/ai';
 
 const Contact = () => {
@@ -36,10 +35,7 @@ const Contact = () => {
   return (
     <div className="bg-gray-60 min-h-screen flex justify-center items-center">
       <div className="bg-white p-6 rounded-lg shadow-md w-full md:w-2/3 lg:w-3/4">
-        {/* Image Card */}
-        <div className="bg-white p-4 rounded-lg shadow-md w-32 h-32 md:w-64 md:h-64">
-          <img src={images.contact} alt="contact" className="w-1/2 md:w-full" />
-        </div>
+        
 
         {/* Email Card */}
         <div className="bg-white p-4 rounded-lg shadow-md mb-4">

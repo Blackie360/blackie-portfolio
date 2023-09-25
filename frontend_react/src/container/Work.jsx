@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { AiFillGithub, AiFillEye } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-import { urlFor,  client } from '../client';
+import { urlFor, client } from '../client';
+import { images } from '../constants'; // Import your icons here
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -33,12 +34,20 @@ const Work = () => {
     }, 500);
   };
 
+  // Icon mapping
+  const iconMap = {
+    'UI/UX': images.ui, 
+    'Web App': images.web, 
+    'Mobile App': images.flutter2, 
+    'React JS': images.react, 
+    'All': images.all, 
+  };
+
   return (
     <div>
-      <h2 className="text-3xl font-bold mb-4"><span className='text-orange-500'>Portfolio</span> Section</h2>
+      <h2 className="text-3xl gap-2 font-bold mb-4 flex justify-center"><span className='text-orange-500'>Portfolio </span> Section</h2>
 
-    
-      <div className="flex space-x-4 text-black">
+      <div className="flex space-x-4 text-black justify-center">
         {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
           <div
             key={index}
@@ -47,12 +56,12 @@ const Work = () => {
               activeFilter === item ? 'bg-purple-500 text-black' : 'bg-white text-black'
             }`}
           >
+            <img src={iconMap[item]} alt={item} className="w-10 h-10 mr-2 flex justify-center" />
             {item}
           </div>
         ))}
       </div>
 
-      
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
