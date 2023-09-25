@@ -38,7 +38,6 @@ const Header = () => {
         />
       </motion.div>
   
-      {/* Content section */}
       <div className="md:w-1/2 text-center md:text-left">
         <h1 className="text-xl font-sans">Hello 👋  I am </h1>
         <h1 className='text-2xl font-bold'>Felix Jumason</h1>
@@ -47,10 +46,10 @@ const Header = () => {
         {/* Buttons */}
         <div className="my-4 space-x-4 flex justify-center">
           <button className="border border-black bg-white hover:bg-gray-800 text-black font-bold py-2 px-4 rounded">
-            Download CV
+           <a href="https://felix-jumason.netlify.app/home.html" >View CV </a>
           </button>
           <button className="border border-black bg-white hover:bg-gray-800 text-black font-bold py-2 px-4 rounded">
-            Contact Info
+            <a href='mailto:felixkent360@gmail.com'>HIRE ME </a> 
           </button>
         </div>
   
