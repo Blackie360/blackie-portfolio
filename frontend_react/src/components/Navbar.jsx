@@ -1,78 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
-
+import React, { useState } from 'react';
+import { AiOutlineMenu } from 'react-icons/ai'; 
 const Nav = () => {
-  const Links = [
-    { name: 'HOME', link: '#home' },
-    { name: 'ABOUT', link: '#about' },
-    { name: 'PORTFOLIO', link: '#portfolio' },
-    { name: 'SKILLS', link: '#skills' },
-  ];
-
   const [open, setOpen] = useState(false);
-  const [navbarOpacity, setNavbarOpacity] = useState(1); // Initial opacity is 1 (fully visible)
 
-  // Add a scroll event listener to handle navbar opacity
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY || window.pageYOffset;
-      const maxScroll = 100;
-      const newOpacity = 1 - Math.min(scrollY / maxScroll, 1);
-      setNavbarOpacity(newOpacity);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  // Toggle mobile menu
   const toggleMobileMenu = () => {
     setOpen(!open);
   };
 
   return (
-    <div
-      className="shadow-md w-full fixed top-0 left-0 bg-gray-100"
-      style={{ opacity: navbarOpacity }} // Set opacity based on state
-    >
-      <div className="md:flex items-center justify-between py-4 md:px-10 px-7">
-        <div className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800">
-          {/* Your logo and title */}
-        </div>
-
-        <div
-          onClick={toggleMobileMenu}
-          className={`text-3xl absolute right-8 top-4 cursor-pointer md:hidden ${
-            open ? 'top-6' : '' // Adjust top position for open and closed state
-          }`}
-        >
-          {open ? <FaTimes /> : <FaBars />}
-        </div>
-
-        {/* Conditionally render the links based on the 'open' state */}
-        {open && (
-          <ul
-            className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-gray-100 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
-              open ? 'top-20' : '-top-490px' // Adjust top position for open and closed state
-            }`}
+    <nav className="bg-blue-500 p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="text-white text-2xl font-bold">Your Logo</div>
+        <div className="md:hidden">
+          <button
+            onClick={toggleMobileMenu}
+            className="text-white text-2xl focus:outline-none"
           >
-            {Links.map((link) => (
-              <li key={link.name} className="md:ml-8 text-xl md:my-0 my-7">
-                <a
-                  href={link.link}
-                  className="text-gray-800 hover:text-gray-400 duration-500"
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
+            {open ? 'Close' : <AiOutlineMenu />} 
+          </button>
+        </div>
+        <div className={`md:flex md:items-center ${open ? 'block' : 'hidden'}`}>
+          <ul className="md:flex space-x-4">
+            <li><a href="#home" className="text-white hover:text-blue-200">Home</a></li>
+            <li><a href="#about" className="text-white hover:text-blue-200">About</a></li>
+            <li><a href="#portfolio" className="text-white hover:text-blue-200">Portfolio</a></li>
+            <li><a href="#skills" className="text-white hover:text-blue-200">Skills</a></li>
           </ul>
-        )}
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
