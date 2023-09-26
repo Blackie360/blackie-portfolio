@@ -4,7 +4,7 @@ import { FaTwitter, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import { images } from '../constants';
 
 const Header = () => {
-  const imageSrc = images.kenyan; // Replace with your image source
+  const imageSrc = images.phelix; 
 
   const imageVariants = {
     initial: {
@@ -34,7 +34,7 @@ const Header = () => {
         <img
           src={imageSrc}
           alt="Header"
-          className="w-full h-full object-cover grayscale"
+          className="w-full h-full "
         />
       </motion.div>
   

@@ -25,6 +25,11 @@ export default {
         type: 'string',
       },
       {
+        name: 'role',
+        title: 'Role',
+        type: 'string',
+      },
+      {
         name: 'imgUrl',
         title: 'ImageUrl',
         type: 'image',

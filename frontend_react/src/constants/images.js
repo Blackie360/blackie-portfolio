@@ -11,6 +11,7 @@ import ui from "../assets/uiux.png";
 import all from "../assets/all.png";
 import flutter2 from "../assets/flutter2.png";
 import logo from "../assets/logo bg.png";
+import phelix from "../assets/phelix.jpg"
 export default{
 bgWhite,
 frontend,
@@ -24,6 +25,7 @@ ui,
 all,
 flutter2,
 logo,
+phelix,
 contact
 
 

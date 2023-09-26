@@ -12,7 +12,7 @@ const Nav = () => {
               scale: 1.1,
               opacity: 0.7,
               transition: { duration: 0.3 },
-            }} // Apply animation on hover
+            }} 
           >
             <a
               href="#home"
