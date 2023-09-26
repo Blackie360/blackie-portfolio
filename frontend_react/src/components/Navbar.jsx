@@ -1,80 +1,74 @@
-import React, { useState } from 'react';
-import { AiOutlineMenu } from 'react-icons/ai';
-import images from '../constants/images';
+import React from "react";
+import { motion } from "framer-motion";
 
 const Nav = () => {
-  const [open, setOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setOpen(!open);
-  };
-
-  const closeMobileMenu = () => {
-    setOpen(false);
-  };
-
   return (
-    <nav className="bg-gray-100 p-4 flex justify-center">
-      <div className="container mx-auto flex justify-between items-center">
-      <div className="text-black text-3xl font-bold">
-          <img
-            src={images.logo}
-            alt="logo"
-            className="w-20 h-20 md:w-16 md:h-16 lg:w-20 lg:h-20" 
-          />
-        </div>
-
-
-        <div className="md:hidden">
-          <button
-            onClick={toggleMobileMenu}
-            className="text-black text-2xl focus:outline-none"
+    <header className="relative">
+      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 rounded-full border border-black border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]">
+        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 gap-2">
+          <motion.li
+            className="h-3/4 flex items-center justify-center relative"
+            whileHover={{
+              scale: 1.1,
+              opacity: 0.7,
+              transition: { duration: 0.3 },
+            }} // Apply animation on hover
           >
-            {open ? 'Close' : <AiOutlineMenu />}
-          </button>
-        </div>
-        <div className={`md:flex md:items-center ${open ? 'block' : 'hidden'}`}>
-          <ul className="md:flex space-x-4 ">
-            <li>
-              <a
-                href="#home"
-                className="text-black hover:text-gray-200 flex justify-center"
-                onClick={closeMobileMenu} 
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                className="text-black hover:text-gray-200"
-                onClick={closeMobileMenu} 
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#portfolio"
-                className="text-black hover:text-gray-200"
-                onClick={closeMobileMenu} 
-              >
-                Portfolio
-              </a>
-            </li>
-            <li>
-              <a
-                href="#skills"
-                className="text-black hover:text-gray-200"
-                onClick={closeMobileMenu} // Close the mobile menu on click
-              >
-                Skills
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+            <a
+              href="#home"
+              className="nav-link"
+            >
+              Home
+            </a>
+          </motion.li>
+          <motion.li
+            className="h-3/4 flex items-center justify-center relative"
+            whileHover={{
+              scale: 1.1,
+              opacity: 0.7,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <a
+              href="#about"
+              className="nav-link"
+            >
+              About
+            </a>
+          </motion.li>
+          <motion.li
+            className="h-3/4 flex items-center justify-center relative"
+            whileHover={{
+              scale: 1.1,
+              opacity: 0.7,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <a
+              href="#portfolio"
+              className="nav-link"
+            >
+              Portfolio
+            </a>
+          </motion.li>
+          <motion.li
+            className="h-3/4 flex items-center justify-center relative"
+            whileHover={{
+              scale: 1.1,
+              opacity: 0.7,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <a
+              href="#skills"
+              className="nav-link"
+            >
+              Skills
+            </a>
+          </motion.li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

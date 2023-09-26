@@ -22,7 +22,7 @@ const Skills = () => {
     <>
     <div id='skills'className='bg-gray-100' >
     <br />
-      <h2 className="text-2xl font-bold flex justify-center">Skills & Tools</h2>
+      <h2 className="text-2xl font-bold flex justify-center gap-1"><span className='text-orange-500'>Skills </span> & Tools</h2>
 
       <div className="flex flex-wrap gap-4">
         {skills.map((skill) => (
