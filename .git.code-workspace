@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".git"
+		},
+		{
+			"path": "backend_sanity"
+		},
+		{
+			"path": "frontend_react"
+		}
+	]
+}
