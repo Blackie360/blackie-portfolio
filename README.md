@@ -28,4 +28,3 @@ Create a Sanity.io account and dataset, update the Sanity client config
 Run npm run start
 Edit content on Sanity, view updates locally in real-time
 Let me know if any issues getting it running!
-
